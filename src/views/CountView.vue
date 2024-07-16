@@ -5,12 +5,12 @@ import CountMessage from '../components/CountMessage.vue';
 const count = ref<number>(0);
 
 // カウントアップ
-const increment = () => {
+const increment = (): void => {
 	count.value++;
 };
 
 // カウントダウン
-const decrement = () => {
+const decrement = (): void => {
 	count.value--;
 };
 </script>
@@ -22,7 +22,7 @@ const decrement = () => {
 			<p>現在のカウント: {{ count }}</p>
 			<button @click="increment">カウントアップ</button>
 			<button @click="decrement">カウントダウン</button>
-			<CountMesssage v-if="count >= 10" :count="count" />
+			<CountMessage v-if="count >= 10" :count="count" />
 		</div>
 	</main>
 </template>
